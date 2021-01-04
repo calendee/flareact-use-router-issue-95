@@ -5,5 +5,10 @@ export default function Post() {
 
   const { category, slug } = router.query;
 
-  return new Response(`Category = ${category}, Slug = ${slug}`)
+  return (
+    <>
+      <h1>{`Category = ${category}, Slug = ${slug}`}</h1>
+      <p>{`router.query=${JSON.stringify(router.query)}`}</p>
+    </>
+  );
 }
